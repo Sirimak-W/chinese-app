@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学 Mandarin — Daily Chinese</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- 1. Nav bar -->
+    <nav class="nav">
+      <h1 class="nav-title">学 <span>Mandarin</span></h1>
+      <div class="streak" id="streak" title="Daily streak">
+        <span class="flame">🔥</span>
+        <span id="streak-count">0</span>-day streak
+      </div>
+    </nav>
+
+    <!-- 2. Stats row -->
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-learned">0</div>
+        <div class="stat-label">Words learned</div>
+        <div class="stat-sub" id="stat-learned-today">+0 today</div>
+      </div>
+      <div class="stat-card stat-due">
+        <div class="stat-value" id="stat-due">0</div>
+        <div class="stat-label">Due for review</div>
+        <div class="stat-sub">today</div>
+      </div>
+      <div class="stat-card stat-acc">
+        <div class="stat-value" id="stat-accuracy">—</div>
+        <div class="stat-label">Accuracy</div>
+        <div class="stat-sub">last 7 days</div>
+      </div>
+    </section>
+
+    <!-- 3. Flashcard -->
+    <section class="flashcard" id="flashcard">
+      <div class="card-badge">
+        <span class="badge-hsk" id="badge-hsk">HSK 1</span>
+        <span class="badge-reviews" id="badge-reviews">0 reviews</span>
+      </div>
+
+      <div class="card-main">
+        <div class="hanzi" id="card-hanzi">学习</div>
+        <div class="pinyin" id="card-pinyin">xuéxí</div>
+        <div class="meaning" id="card-meaning">to study, to learn</div>
+      </div>
+
+      <button class="listen-btn" id="listen-btn" title="Listen (zh-CN)">
+        🔊 Listen
+      </button>
+
+      <div class="example">
+        <div class="ex-pinyin" id="ex-pinyin">Wǒ měitiān xuéxí zhōngwén.</div>
+        <div class="ex-hanzi" id="ex-hanzi">我每天学习中文。</div>
+        <div class="ex-translation" id="ex-translation">I study Chinese every day.</div>
+      </div>
+    </section>
+
+    <!-- 4. SRS buttons -->
+    <section class="srs" id="srs">
+      <button class="srs-btn again" data-grade="again">Again<span>10 min</span></button>
+      <button class="srs-btn hard"  data-grade="hard">Hard<span>1 day</span></button>
+      <button class="srs-btn good"  data-grade="good">Good<span>4 days</span></button>
+      <button class="srs-btn easy"  data-grade="easy">Easy<span>1 week</span></button>
+    </section>
+
+    <!-- 5. Learning modules grid -->
+    <section class="modules">
+      <div class="module mod-vocab">
+        <div class="mod-head"><span class="mod-icon">📖</span> Vocabulary HSK 1–3</div>
+        <div class="mod-count" id="mod-vocab-count">0 / 1200</div>
+        <div class="bar"><div class="bar-fill" id="mod-vocab-bar"></div></div>
+      </div>
+      <div class="module mod-writing">
+        <div class="mod-head"><span class="mod-icon">✍️</span> Writing / Characters</div>
+        <div class="mod-count" id="mod-writing-count">0 / 300</div>
+        <div class="bar"><div class="bar-fill" id="mod-writing-bar"></div></div>
+      </div>
+      <div class="module mod-tones">
+        <div class="mod-head"><span class="mod-icon">🎵</span> Tones</div>
+        <div class="mod-count" id="mod-tones-count">0 / 4 levels</div>
+        <div class="bar"><div class="bar-fill" id="mod-tones-bar"></div></div>
+      </div>
+      <div class="module mod-grammar">
+        <div class="mod-head"><span class="mod-icon">🧩</span> Grammar</div>
+        <div class="mod-count" id="mod-grammar-count">0 / 40 lessons</div>
+        <div class="bar"><div class="bar-fill" id="mod-grammar-bar"></div></div>
+      </div>
+    </section>
+
+    <!-- 6. Year activity heatmap -->
+    <section class="heatmap-section">
+      <h2 class="section-title">Activity</h2>
+      <div class="heatmap-scroll">
+        <div class="heatmap" id="heatmap"></div>
+      </div>
+      <div class="heatmap-footer">
+        <span id="heatmap-total">0 sessions in the last year</span>
+        <div class="legend">
+          Less
+          <span class="legend-cell level-0"></span>
+          <span class="legend-cell level-1"></span>
+          <span class="legend-cell level-2"></span>
+          <span class="legend-cell level-3"></span>
+          <span class="legend-cell level-4"></span>
+          More
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+  <script src="app.js"></script>
+</body>
+</html>
