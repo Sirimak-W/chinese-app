@@ -5,13 +5,20 @@ All progress is stored in your browser's `localStorage`. Built to be hosted on G
 
 ## Features
 
-- **Flashcards** — Hanzi, pinyin, English meaning, and a 3-line example sentence (pinyin / hanzi / translation).
+- **Two-way active recall** — each card randomly tests Hanzi → Meaning or Meaning → Hanzi. The answer
+  (Hanzi, pinyin, meaning, examples, compounds) stays hidden behind a "Show Answer" button so you
+  actually recall it instead of just re-reading it.
+- **3 example sentences per word** — each with its own 🔊 listen button.
+- **Compound words** — related words built from the main card's Hanzi (e.g. 做工作 / 做饭 / 做运动 from 做),
+  shown as clickable, speakable chips.
+- **Write your own sentence** — a free-text box on every card to produce output immediately; saved
+  sentences persist per word and are shown back to you next time.
+- **Fixed-day spaced repetition** — Again (10 min), Hard (repeat step), Good (advance a step), Easy
+  (skip a step), stepping through Day 1 → 3 → 7 → 14 → 30; due cards resurface automatically.
 - **Listen button** — speaks the word in Mandarin via the Web Speech API (`zh-CN`, rate `0.8`).
-- **SM-2 spaced repetition** — four ratings (Again / Hard / Good / Easy) reschedule each card; due cards resurface automatically.
 - **Stats** — words learned (+ today), cards due, and 7-day accuracy.
 - **Streak counter** — consecutive days with a study session.
 - **Year activity heatmap** — GitHub-style contribution graph with month labels and hover tooltips.
-- **Module progress** — Vocabulary, Writing/Characters, Tones, Grammar.
 
 ## Run locally
 
@@ -34,16 +41,20 @@ Add more entries in the same format to grow the deck:
   "pinyin": "xuéxí",
   "meaning": "to study, to learn",
   "hsk": 2,
-  "example": {
-    "hanzi": "我每天学习中文。",
-    "pinyin": "Wǒ měitiān xuéxí zhōngwén.",
-    "translation": "I study Chinese every day."
-  }
+  "examples": [
+    { "hanzi": "我每天学习中文。", "pinyin": "Wǒ měitiān xuéxí zhōngwén.", "translation": "I study Chinese every day." },
+    { "hanzi": "他很努力学习。", "pinyin": "Tā hěn nǔlì xuéxí.", "translation": "He studies very hard." },
+    { "hanzi": "我在学习写汉字。", "pinyin": "Wǒ zài xuéxí xiě hànzì.", "translation": "I am learning to write Chinese characters." }
+  ],
+  "compounds": [
+    { "hanzi": "学习中文", "pinyin": "xuéxí zhōngwén", "meaning": "study Chinese" },
+    { "hanzi": "学习计划", "pinyin": "xuéxí jìhuà", "meaning": "study plan" }
+  ]
 }
 ```
 
-The Vocabulary and Writing progress bars track real progress against the 1,200-word / 300-character
-targets. Tones and Grammar are placeholders that will fill in once their content is added.
+`examples` should have exactly 3 entries. `compounds` is optional (0-6 entries) and lists related
+words built from the card's Hanzi — shown as speakable chips once the answer is revealed.
 
 ## Reset progress
 

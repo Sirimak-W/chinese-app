@@ -1,32 +1,354 @@
 [
-  { "hanzi": "我", "pinyin": "wǒ", "meaning": "I, me", "hsk": 1, "example": { "hanzi": "我是学生。", "pinyin": "Wǒ shì xuéshēng.", "translation": "I am a student." } },
-  { "hanzi": "你", "pinyin": "nǐ", "meaning": "you", "hsk": 1, "example": { "hanzi": "你好吗？", "pinyin": "Nǐ hǎo ma?", "translation": "How are you?" } },
-  { "hanzi": "好", "pinyin": "hǎo", "meaning": "good, well", "hsk": 1, "example": { "hanzi": "今天天气很好。", "pinyin": "Jīntiān tiānqì hěn hǎo.", "translation": "The weather is nice today." } },
-  { "hanzi": "是", "pinyin": "shì", "meaning": "to be", "hsk": 1, "example": { "hanzi": "他是医生。", "pinyin": "Tā shì yīshēng.", "translation": "He is a doctor." } },
-  { "hanzi": "不", "pinyin": "bù", "meaning": "not, no", "hsk": 1, "example": { "hanzi": "我不喝咖啡。", "pinyin": "Wǒ bù hē kāfēi.", "translation": "I don't drink coffee." } },
-  { "hanzi": "人", "pinyin": "rén", "meaning": "person, people", "hsk": 1, "example": { "hanzi": "这里有很多人。", "pinyin": "Zhèlǐ yǒu hěn duō rén.", "translation": "There are many people here." } },
-  { "hanzi": "大", "pinyin": "dà", "meaning": "big, large", "hsk": 1, "example": { "hanzi": "这个房子很大。", "pinyin": "Zhège fángzi hěn dà.", "translation": "This house is very big." } },
-  { "hanzi": "小", "pinyin": "xiǎo", "meaning": "small, little", "hsk": 1, "example": { "hanzi": "我有一只小猫。", "pinyin": "Wǒ yǒu yì zhī xiǎo māo.", "translation": "I have a little cat." } },
-  { "hanzi": "中国", "pinyin": "Zhōngguó", "meaning": "China", "hsk": 1, "example": { "hanzi": "我想去中国。", "pinyin": "Wǒ xiǎng qù Zhōngguó.", "translation": "I want to go to China." } },
-  { "hanzi": "学生", "pinyin": "xuéshēng", "meaning": "student", "hsk": 1, "example": { "hanzi": "她是大学学生。", "pinyin": "Tā shì dàxué xuéshēng.", "translation": "She is a university student." } },
-  { "hanzi": "老师", "pinyin": "lǎoshī", "meaning": "teacher", "hsk": 1, "example": { "hanzi": "我的老师很好。", "pinyin": "Wǒ de lǎoshī hěn hǎo.", "translation": "My teacher is very nice." } },
-  { "hanzi": "朋友", "pinyin": "péngyǒu", "meaning": "friend", "hsk": 1, "example": { "hanzi": "他是我的好朋友。", "pinyin": "Tā shì wǒ de hǎo péngyǒu.", "translation": "He is my good friend." } },
-  { "hanzi": "谢谢", "pinyin": "xièxie", "meaning": "thank you", "hsk": 1, "example": { "hanzi": "谢谢你的帮助。", "pinyin": "Xièxie nǐ de bāngzhù.", "translation": "Thank you for your help." } },
-  { "hanzi": "再见", "pinyin": "zàijiàn", "meaning": "goodbye", "hsk": 1, "example": { "hanzi": "老师，再见！", "pinyin": "Lǎoshī, zàijiàn!", "translation": "Goodbye, teacher!" } },
-  { "hanzi": "吃", "pinyin": "chī", "meaning": "to eat", "hsk": 1, "example": { "hanzi": "我们一起吃饭。", "pinyin": "Wǒmen yìqǐ chīfàn.", "translation": "Let's eat together." } },
-  { "hanzi": "喝", "pinyin": "hē", "meaning": "to drink", "hsk": 1, "example": { "hanzi": "我想喝水。", "pinyin": "Wǒ xiǎng hē shuǐ.", "translation": "I want to drink water." } },
-  { "hanzi": "水", "pinyin": "shuǐ", "meaning": "water", "hsk": 1, "example": { "hanzi": "请给我一杯水。", "pinyin": "Qǐng gěi wǒ yì bēi shuǐ.", "translation": "Please give me a glass of water." } },
-  { "hanzi": "看", "pinyin": "kàn", "meaning": "to look, to watch, to read", "hsk": 1, "example": { "hanzi": "我喜欢看电影。", "pinyin": "Wǒ xǐhuān kàn diànyǐng.", "translation": "I like watching movies." } },
-  { "hanzi": "听", "pinyin": "tīng", "meaning": "to listen", "hsk": 1, "example": { "hanzi": "她在听音乐。", "pinyin": "Tā zài tīng yīnyuè.", "translation": "She is listening to music." } },
-  { "hanzi": "说", "pinyin": "shuō", "meaning": "to speak, to say", "hsk": 1, "example": { "hanzi": "你会说中文吗？", "pinyin": "Nǐ huì shuō zhōngwén ma?", "translation": "Can you speak Chinese?" } },
-  { "hanzi": "家", "pinyin": "jiā", "meaning": "home, family", "hsk": 1, "example": { "hanzi": "我在家工作。", "pinyin": "Wǒ zài jiā gōngzuò.", "translation": "I work at home." } },
-  { "hanzi": "书", "pinyin": "shū", "meaning": "book", "hsk": 1, "example": { "hanzi": "这本书很有意思。", "pinyin": "Zhè běn shū hěn yǒuyìsi.", "translation": "This book is very interesting." } },
-  { "hanzi": "今天", "pinyin": "jīntiān", "meaning": "today", "hsk": 1, "example": { "hanzi": "今天是星期一。", "pinyin": "Jīntiān shì xīngqīyī.", "translation": "Today is Monday." } },
-  { "hanzi": "明天", "pinyin": "míngtiān", "meaning": "tomorrow", "hsk": 1, "example": { "hanzi": "明天我们去学校。", "pinyin": "Míngtiān wǒmen qù xuéxiào.", "translation": "Tomorrow we go to school." } },
-  { "hanzi": "爱", "pinyin": "ài", "meaning": "to love", "hsk": 1, "example": { "hanzi": "我爱我的家人。", "pinyin": "Wǒ ài wǒ de jiārén.", "translation": "I love my family." } },
-  { "hanzi": "去", "pinyin": "qù", "meaning": "to go", "hsk": 1, "example": { "hanzi": "你去哪儿？", "pinyin": "Nǐ qù nǎr?", "translation": "Where are you going?" } },
-  { "hanzi": "来", "pinyin": "lái", "meaning": "to come", "hsk": 1, "example": { "hanzi": "请你来我家。", "pinyin": "Qǐng nǐ lái wǒ jiā.", "translation": "Please come to my house." } },
-  { "hanzi": "钱", "pinyin": "qián", "meaning": "money", "hsk": 1, "example": { "hanzi": "这个多少钱？", "pinyin": "Zhège duōshǎo qián?", "translation": "How much is this?" } },
-  { "hanzi": "买", "pinyin": "mǎi", "meaning": "to buy", "hsk": 1, "example": { "hanzi": "我想买水果。", "pinyin": "Wǒ xiǎng mǎi shuǐguǒ.", "translation": "I want to buy fruit." } },
-  { "hanzi": "工作", "pinyin": "gōngzuò", "meaning": "work, job; to work", "hsk": 1, "example": { "hanzi": "他的工作很忙。", "pinyin": "Tā de gōngzuò hěn máng.", "translation": "His job is very busy." } }
+  { "hanzi": "我", "pinyin": "wǒ", "meaning": "I, me", "hsk": 1,
+    "examples": [
+      { "hanzi": "我是学生。", "pinyin": "Wǒ shì xuéshēng.", "translation": "I am a student." },
+      { "hanzi": "我喜欢喝水。", "pinyin": "Wǒ xǐhuān hē shuǐ.", "translation": "I like to drink water." },
+      { "hanzi": "这是我的书。", "pinyin": "Zhè shì wǒ de shū.", "translation": "This is my book." }
+    ],
+    "compounds": [
+      { "hanzi": "我们", "pinyin": "wǒmen", "meaning": "we, us" },
+      { "hanzi": "我的", "pinyin": "wǒ de", "meaning": "my, mine" },
+      { "hanzi": "自我", "pinyin": "zìwǒ", "meaning": "self" }
+    ]
+  },
+  { "hanzi": "你", "pinyin": "nǐ", "meaning": "you", "hsk": 1,
+    "examples": [
+      { "hanzi": "你好吗？", "pinyin": "Nǐ hǎo ma?", "translation": "How are you?" },
+      { "hanzi": "你是老师吗？", "pinyin": "Nǐ shì lǎoshī ma?", "translation": "Are you a teacher?" },
+      { "hanzi": "你喜欢什么？", "pinyin": "Nǐ xǐhuān shénme?", "translation": "What do you like?" }
+    ],
+    "compounds": [
+      { "hanzi": "你们", "pinyin": "nǐmen", "meaning": "you (plural)" },
+      { "hanzi": "你的", "pinyin": "nǐ de", "meaning": "your, yours" }
+    ]
+  },
+  { "hanzi": "好", "pinyin": "hǎo", "meaning": "good, well", "hsk": 1,
+    "examples": [
+      { "hanzi": "今天天气很好。", "pinyin": "Jīntiān tiānqì hěn hǎo.", "translation": "The weather is nice today." },
+      { "hanzi": "他是一个好人。", "pinyin": "Tā shì yí ge hǎorén.", "translation": "He is a good person." },
+      { "hanzi": "你好！", "pinyin": "Nǐ hǎo!", "translation": "Hello!" }
+    ],
+    "compounds": [
+      { "hanzi": "你好", "pinyin": "nǐ hǎo", "meaning": "hello" },
+      { "hanzi": "好吃", "pinyin": "hǎochī", "meaning": "tasty" },
+      { "hanzi": "好朋友", "pinyin": "hǎo péngyǒu", "meaning": "good friend" },
+      { "hanzi": "很好", "pinyin": "hěn hǎo", "meaning": "very good" }
+    ]
+  },
+  { "hanzi": "是", "pinyin": "shì", "meaning": "to be", "hsk": 1,
+    "examples": [
+      { "hanzi": "他是医生。", "pinyin": "Tā shì yīshēng.", "translation": "He is a doctor." },
+      { "hanzi": "这是我的家。", "pinyin": "Zhè shì wǒ de jiā.", "translation": "This is my home." },
+      { "hanzi": "她是老师。", "pinyin": "Tā shì lǎoshī.", "translation": "She is a teacher." }
+    ],
+    "compounds": [
+      { "hanzi": "不是", "pinyin": "bú shì", "meaning": "is not" },
+      { "hanzi": "是不是", "pinyin": "shì bú shì", "meaning": "is it or not" }
+    ]
+  },
+  { "hanzi": "不", "pinyin": "bù", "meaning": "not, no", "hsk": 1,
+    "examples": [
+      { "hanzi": "我不喝咖啡。", "pinyin": "Wǒ bù hē kāfēi.", "translation": "I don't drink coffee." },
+      { "hanzi": "他不是老师。", "pinyin": "Tā bú shì lǎoshī.", "translation": "He is not a teacher." },
+      { "hanzi": "我不知道。", "pinyin": "Wǒ bù zhīdào.", "translation": "I don't know." }
+    ],
+    "compounds": [
+      { "hanzi": "不好", "pinyin": "bù hǎo", "meaning": "not good" },
+      { "hanzi": "不是", "pinyin": "bú shì", "meaning": "is not" },
+      { "hanzi": "不客气", "pinyin": "bú kèqi", "meaning": "you're welcome" }
+    ]
+  },
+  { "hanzi": "人", "pinyin": "rén", "meaning": "person, people", "hsk": 1,
+    "examples": [
+      { "hanzi": "这里有很多人。", "pinyin": "Zhèlǐ yǒu hěn duō rén.", "translation": "There are many people here." },
+      { "hanzi": "她是好人。", "pinyin": "Tā shì hǎorén.", "translation": "She is a good person." },
+      { "hanzi": "中国人很友好。", "pinyin": "Zhōngguórén hěn yǒuhǎo.", "translation": "Chinese people are friendly." }
+    ],
+    "compounds": [
+      { "hanzi": "中国人", "pinyin": "Zhōngguórén", "meaning": "Chinese person" },
+      { "hanzi": "人们", "pinyin": "rénmen", "meaning": "people" },
+      { "hanzi": "大人", "pinyin": "dàrén", "meaning": "adult" },
+      { "hanzi": "好人", "pinyin": "hǎorén", "meaning": "good person" }
+    ]
+  },
+  { "hanzi": "大", "pinyin": "dà", "meaning": "big, large", "hsk": 1,
+    "examples": [
+      { "hanzi": "这个房子很大。", "pinyin": "Zhège fángzi hěn dà.", "translation": "This house is very big." },
+      { "hanzi": "中国很大。", "pinyin": "Zhōngguó hěn dà.", "translation": "China is very big." },
+      { "hanzi": "他有一个大问题。", "pinyin": "Tā yǒu yí ge dà wèntí.", "translation": "He has a big problem." }
+    ],
+    "compounds": [
+      { "hanzi": "大学", "pinyin": "dàxué", "meaning": "university" },
+      { "hanzi": "大人", "pinyin": "dàrén", "meaning": "adult" },
+      { "hanzi": "长大", "pinyin": "zhǎngdà", "meaning": "to grow up" }
+    ]
+  },
+  { "hanzi": "小", "pinyin": "xiǎo", "meaning": "small, little", "hsk": 1,
+    "examples": [
+      { "hanzi": "我有一只小猫。", "pinyin": "Wǒ yǒu yì zhī xiǎo māo.", "translation": "I have a little cat." },
+      { "hanzi": "这个杯子很小。", "pinyin": "Zhège bēizi hěn xiǎo.", "translation": "This cup is very small." },
+      { "hanzi": "小朋友们在玩。", "pinyin": "Xiǎo péngyǒu men zài wán.", "translation": "The kids are playing." }
+    ],
+    "compounds": [
+      { "hanzi": "小心", "pinyin": "xiǎoxīn", "meaning": "be careful" },
+      { "hanzi": "小朋友", "pinyin": "xiǎo péngyǒu", "meaning": "child, kid" },
+      { "hanzi": "小时", "pinyin": "xiǎoshí", "meaning": "hour" }
+    ]
+  },
+  { "hanzi": "中国", "pinyin": "Zhōngguó", "meaning": "China", "hsk": 1,
+    "examples": [
+      { "hanzi": "我想去中国。", "pinyin": "Wǒ xiǎng qù Zhōngguó.", "translation": "I want to go to China." },
+      { "hanzi": "中国的文化很有意思。", "pinyin": "Zhōngguó de wénhuà hěn yǒuyìsi.", "translation": "Chinese culture is very interesting." },
+      { "hanzi": "他是中国人。", "pinyin": "Tā shì Zhōngguórén.", "translation": "He is Chinese." }
+    ],
+    "compounds": [
+      { "hanzi": "中国人", "pinyin": "Zhōngguórén", "meaning": "Chinese person" },
+      { "hanzi": "中国话", "pinyin": "Zhōngguóhuà", "meaning": "Chinese language (spoken)" }
+    ]
+  },
+  { "hanzi": "学生", "pinyin": "xuéshēng", "meaning": "student", "hsk": 1,
+    "examples": [
+      { "hanzi": "她是大学学生。", "pinyin": "Tā shì dàxué xuéshēng.", "translation": "She is a university student." },
+      { "hanzi": "学生们在上课。", "pinyin": "Xuéshēngmen zài shàngkè.", "translation": "The students are in class." },
+      { "hanzi": "我以前是学生。", "pinyin": "Wǒ yǐqián shì xuéshēng.", "translation": "I used to be a student." }
+    ],
+    "compounds": [
+      { "hanzi": "大学生", "pinyin": "dàxuéshēng", "meaning": "university student" },
+      { "hanzi": "学生证", "pinyin": "xuéshēngzhèng", "meaning": "student ID" },
+      { "hanzi": "好学生", "pinyin": "hǎo xuéshēng", "meaning": "good student" }
+    ]
+  },
+  { "hanzi": "老师", "pinyin": "lǎoshī", "meaning": "teacher", "hsk": 1,
+    "examples": [
+      { "hanzi": "我的老师很好。", "pinyin": "Wǒ de lǎoshī hěn hǎo.", "translation": "My teacher is very nice." },
+      { "hanzi": "老师，再见！", "pinyin": "Lǎoshī, zàijiàn!", "translation": "Goodbye, teacher!" },
+      { "hanzi": "他想当老师。", "pinyin": "Tā xiǎng dāng lǎoshī.", "translation": "He wants to become a teacher." }
+    ],
+    "compounds": [
+      { "hanzi": "老师们", "pinyin": "lǎoshīmen", "meaning": "teachers" },
+      { "hanzi": "中文老师", "pinyin": "Zhōngwén lǎoshī", "meaning": "Chinese teacher" }
+    ]
+  },
+  { "hanzi": "朋友", "pinyin": "péngyǒu", "meaning": "friend", "hsk": 1,
+    "examples": [
+      { "hanzi": "他是我的好朋友。", "pinyin": "Tā shì wǒ de hǎo péngyǒu.", "translation": "He is my good friend." },
+      { "hanzi": "我有很多朋友。", "pinyin": "Wǒ yǒu hěn duō péngyǒu.", "translation": "I have many friends." },
+      { "hanzi": "朋友们一起吃饭。", "pinyin": "Péngyǒumen yìqǐ chīfàn.", "translation": "Friends eat together." }
+    ],
+    "compounds": [
+      { "hanzi": "好朋友", "pinyin": "hǎo péngyǒu", "meaning": "good friend" },
+      { "hanzi": "男朋友", "pinyin": "nán péngyǒu", "meaning": "boyfriend" },
+      { "hanzi": "女朋友", "pinyin": "nǚ péngyǒu", "meaning": "girlfriend" }
+    ]
+  },
+  { "hanzi": "谢谢", "pinyin": "xièxie", "meaning": "thank you", "hsk": 1,
+    "examples": [
+      { "hanzi": "谢谢你的帮助。", "pinyin": "Xièxie nǐ de bāngzhù.", "translation": "Thank you for your help." },
+      { "hanzi": "谢谢老师！", "pinyin": "Xièxie lǎoshī!", "translation": "Thank you, teacher!" },
+      { "hanzi": "非常谢谢你。", "pinyin": "Fēicháng xièxie nǐ.", "translation": "Thank you very much." }
+    ],
+    "compounds": [
+      { "hanzi": "谢谢你", "pinyin": "xièxie nǐ", "meaning": "thank you" },
+      { "hanzi": "不用谢", "pinyin": "búyòng xiè", "meaning": "you're welcome" }
+    ]
+  },
+  { "hanzi": "再见", "pinyin": "zàijiàn", "meaning": "goodbye", "hsk": 1,
+    "examples": [
+      { "hanzi": "老师，再见！", "pinyin": "Lǎoshī, zàijiàn!", "translation": "Goodbye, teacher!" },
+      { "hanzi": "明天再见。", "pinyin": "Míngtiān zàijiàn.", "translation": "See you tomorrow." },
+      { "hanzi": "朋友们说再见。", "pinyin": "Péngyǒumen shuō zàijiàn.", "translation": "Friends say goodbye." }
+    ],
+    "compounds": [
+      { "hanzi": "再来", "pinyin": "zàilái", "meaning": "come again" },
+      { "hanzi": "再说", "pinyin": "zàishuō", "meaning": "talk about it later" }
+    ]
+  },
+  { "hanzi": "吃", "pinyin": "chī", "meaning": "to eat", "hsk": 1,
+    "examples": [
+      { "hanzi": "我们一起吃饭。", "pinyin": "Wǒmen yìqǐ chīfàn.", "translation": "Let's eat together." },
+      { "hanzi": "我想吃苹果。", "pinyin": "Wǒ xiǎng chī píngguǒ.", "translation": "I want to eat an apple." },
+      { "hanzi": "你吃早饭了吗？", "pinyin": "Nǐ chī zǎofàn le ma?", "translation": "Have you eaten breakfast?" }
+    ],
+    "compounds": [
+      { "hanzi": "吃饭", "pinyin": "chīfàn", "meaning": "to eat (a meal)" },
+      { "hanzi": "好吃", "pinyin": "hǎochī", "meaning": "delicious" },
+      { "hanzi": "吃早饭", "pinyin": "chī zǎofàn", "meaning": "eat breakfast" }
+    ]
+  },
+  { "hanzi": "喝", "pinyin": "hē", "meaning": "to drink", "hsk": 1,
+    "examples": [
+      { "hanzi": "我想喝水。", "pinyin": "Wǒ xiǎng hē shuǐ.", "translation": "I want to drink water." },
+      { "hanzi": "他喜欢喝茶。", "pinyin": "Tā xǐhuān hē chá.", "translation": "He likes to drink tea." },
+      { "hanzi": "我们喝咖啡吧。", "pinyin": "Wǒmen hē kāfēi ba.", "translation": "Let's drink coffee." }
+    ],
+    "compounds": [
+      { "hanzi": "喝水", "pinyin": "hē shuǐ", "meaning": "drink water" },
+      { "hanzi": "喝茶", "pinyin": "hē chá", "meaning": "drink tea" },
+      { "hanzi": "喝酒", "pinyin": "hē jiǔ", "meaning": "drink alcohol" }
+    ]
+  },
+  { "hanzi": "水", "pinyin": "shuǐ", "meaning": "water", "hsk": 1,
+    "examples": [
+      { "hanzi": "请给我一杯水。", "pinyin": "Qǐng gěi wǒ yì bēi shuǐ.", "translation": "Please give me a glass of water." },
+      { "hanzi": "我每天喝很多水。", "pinyin": "Wǒ měitiān hē hěn duō shuǐ.", "translation": "I drink a lot of water every day." },
+      { "hanzi": "这杯水很热。", "pinyin": "Zhè bēi shuǐ hěn rè.", "translation": "This glass of water is very hot." }
+    ],
+    "compounds": [
+      { "hanzi": "喝水", "pinyin": "hē shuǐ", "meaning": "drink water" },
+      { "hanzi": "水果", "pinyin": "shuǐguǒ", "meaning": "fruit" }
+    ]
+  },
+  { "hanzi": "看", "pinyin": "kàn", "meaning": "to look, to watch, to read", "hsk": 1,
+    "examples": [
+      { "hanzi": "我喜欢看电影。", "pinyin": "Wǒ xǐhuān kàn diànyǐng.", "translation": "I like watching movies." },
+      { "hanzi": "你在看什么书？", "pinyin": "Nǐ zài kàn shénme shū?", "translation": "What book are you reading?" },
+      { "hanzi": "我们一起看电视。", "pinyin": "Wǒmen yìqǐ kàn diànshì.", "translation": "Let's watch TV together." }
+    ],
+    "compounds": [
+      { "hanzi": "看书", "pinyin": "kàn shū", "meaning": "read a book" },
+      { "hanzi": "看电影", "pinyin": "kàn diànyǐng", "meaning": "watch a movie" },
+      { "hanzi": "看电视", "pinyin": "kàn diànshì", "meaning": "watch TV" }
+    ]
+  },
+  { "hanzi": "听", "pinyin": "tīng", "meaning": "to listen", "hsk": 1,
+    "examples": [
+      { "hanzi": "她在听音乐。", "pinyin": "Tā zài tīng yīnyuè.", "translation": "She is listening to music." },
+      { "hanzi": "我每天听中文。", "pinyin": "Wǒ měitiān tīng zhōngwén.", "translation": "I listen to Chinese every day." },
+      { "hanzi": "你听懂了吗？", "pinyin": "Nǐ tīng dǒng le ma?", "translation": "Did you understand (by listening)?" }
+    ],
+    "compounds": [
+      { "hanzi": "听音乐", "pinyin": "tīng yīnyuè", "meaning": "listen to music" },
+      { "hanzi": "听说", "pinyin": "tīngshuō", "meaning": "it is said that" },
+      { "hanzi": "听懂", "pinyin": "tīngdǒng", "meaning": "understand by listening" }
+    ]
+  },
+  { "hanzi": "说", "pinyin": "shuō", "meaning": "to speak, to say", "hsk": 1,
+    "examples": [
+      { "hanzi": "你会说中文吗？", "pinyin": "Nǐ huì shuō zhōngwén ma?", "translation": "Can you speak Chinese?" },
+      { "hanzi": "请慢慢说。", "pinyin": "Qǐng mànmàn shuō.", "translation": "Please speak slowly." },
+      { "hanzi": "他说得很好。", "pinyin": "Tā shuō de hěn hǎo.", "translation": "He speaks very well." }
+    ],
+    "compounds": [
+      { "hanzi": "说话", "pinyin": "shuōhuà", "meaning": "to speak/talk" },
+      { "hanzi": "听说", "pinyin": "tīngshuō", "meaning": "it is said that" },
+      { "hanzi": "说中文", "pinyin": "shuō zhōngwén", "meaning": "speak Chinese" }
+    ]
+  },
+  { "hanzi": "家", "pinyin": "jiā", "meaning": "home, family", "hsk": 1,
+    "examples": [
+      { "hanzi": "我在家工作。", "pinyin": "Wǒ zài jiā gōngzuò.", "translation": "I work at home." },
+      { "hanzi": "我家有三个人。", "pinyin": "Wǒ jiā yǒu sān ge rén.", "translation": "There are three people in my family." },
+      { "hanzi": "我想回家。", "pinyin": "Wǒ xiǎng huí jiā.", "translation": "I want to go home." }
+    ],
+    "compounds": [
+      { "hanzi": "回家", "pinyin": "huí jiā", "meaning": "go home" },
+      { "hanzi": "家人", "pinyin": "jiārén", "meaning": "family member" },
+      { "hanzi": "家里", "pinyin": "jiāli", "meaning": "at home" }
+    ]
+  },
+  { "hanzi": "书", "pinyin": "shū", "meaning": "book", "hsk": 1,
+    "examples": [
+      { "hanzi": "这本书很有意思。", "pinyin": "Zhè běn shū hěn yǒuyìsi.", "translation": "This book is very interesting." },
+      { "hanzi": "我在图书馆看书。", "pinyin": "Wǒ zài túshūguǎn kàn shū.", "translation": "I read books at the library." },
+      { "hanzi": "她买了一本新书。", "pinyin": "Tā mǎi le yì běn xīn shū.", "translation": "She bought a new book." }
+    ],
+    "compounds": [
+      { "hanzi": "看书", "pinyin": "kàn shū", "meaning": "read a book" },
+      { "hanzi": "图书馆", "pinyin": "túshūguǎn", "meaning": "library" },
+      { "hanzi": "书店", "pinyin": "shūdiàn", "meaning": "bookstore" }
+    ]
+  },
+  { "hanzi": "今天", "pinyin": "jīntiān", "meaning": "today", "hsk": 1,
+    "examples": [
+      { "hanzi": "今天是星期一。", "pinyin": "Jīntiān shì xīngqīyī.", "translation": "Today is Monday." },
+      { "hanzi": "今天天气很好。", "pinyin": "Jīntiān tiānqì hěn hǎo.", "translation": "The weather is nice today." },
+      { "hanzi": "今天我很忙。", "pinyin": "Jīntiān wǒ hěn máng.", "translation": "I am very busy today." }
+    ],
+    "compounds": [
+      { "hanzi": "今天晚上", "pinyin": "jīntiān wǎnshang", "meaning": "tonight" },
+      { "hanzi": "今天上午", "pinyin": "jīntiān shàngwǔ", "meaning": "this morning" }
+    ]
+  },
+  { "hanzi": "明天", "pinyin": "míngtiān", "meaning": "tomorrow", "hsk": 1,
+    "examples": [
+      { "hanzi": "明天我们去学校。", "pinyin": "Míngtiān wǒmen qù xuéxiào.", "translation": "Tomorrow we go to school." },
+      { "hanzi": "明天是星期六。", "pinyin": "Míngtiān shì xīngqīliù.", "translation": "Tomorrow is Saturday." },
+      { "hanzi": "我们明天见面。", "pinyin": "Wǒmen míngtiān jiànmiàn.", "translation": "We will meet tomorrow." }
+    ],
+    "compounds": [
+      { "hanzi": "明天晚上", "pinyin": "míngtiān wǎnshang", "meaning": "tomorrow night" },
+      { "hanzi": "明天早上", "pinyin": "míngtiān zǎoshang", "meaning": "tomorrow morning" }
+    ]
+  },
+  { "hanzi": "爱", "pinyin": "ài", "meaning": "to love", "hsk": 1,
+    "examples": [
+      { "hanzi": "我爱我的家人。", "pinyin": "Wǒ ài wǒ de jiārén.", "translation": "I love my family." },
+      { "hanzi": "他很爱看书。", "pinyin": "Tā hěn ài kàn shū.", "translation": "He loves reading." },
+      { "hanzi": "我爱中国文化。", "pinyin": "Wǒ ài Zhōngguó wénhuà.", "translation": "I love Chinese culture." }
+    ],
+    "compounds": [
+      { "hanzi": "爱人", "pinyin": "àirén", "meaning": "spouse, loved one" },
+      { "hanzi": "可爱", "pinyin": "kě'ài", "meaning": "cute" },
+      { "hanzi": "爱好", "pinyin": "àihào", "meaning": "hobby" }
+    ]
+  },
+  { "hanzi": "去", "pinyin": "qù", "meaning": "to go", "hsk": 1,
+    "examples": [
+      { "hanzi": "你去哪儿？", "pinyin": "Nǐ qù nǎr?", "translation": "Where are you going?" },
+      { "hanzi": "我要去学校。", "pinyin": "Wǒ yào qù xuéxiào.", "translation": "I need to go to school." },
+      { "hanzi": "我们去中国旅游。", "pinyin": "Wǒmen qù Zhōngguó lǚyóu.", "translation": "We are going to travel in China." }
+    ],
+    "compounds": [
+      { "hanzi": "去学校", "pinyin": "qù xuéxiào", "meaning": "go to school" },
+      { "hanzi": "出去", "pinyin": "chūqù", "meaning": "go out" },
+      { "hanzi": "回去", "pinyin": "huíqù", "meaning": "go back" }
+    ]
+  },
+  { "hanzi": "来", "pinyin": "lái", "meaning": "to come", "hsk": 1,
+    "examples": [
+      { "hanzi": "请你来我家。", "pinyin": "Qǐng nǐ lái wǒ jiā.", "translation": "Please come to my house." },
+      { "hanzi": "他明天来吗？", "pinyin": "Tā míngtiān lái ma?", "translation": "Is he coming tomorrow?" },
+      { "hanzi": "快过来！", "pinyin": "Kuài guòlái!", "translation": "Come here quickly!" }
+    ],
+    "compounds": [
+      { "hanzi": "过来", "pinyin": "guòlái", "meaning": "come over" },
+      { "hanzi": "回来", "pinyin": "huílái", "meaning": "come back" },
+      { "hanzi": "出来", "pinyin": "chūlái", "meaning": "come out" }
+    ]
+  },
+  { "hanzi": "钱", "pinyin": "qián", "meaning": "money", "hsk": 1,
+    "examples": [
+      { "hanzi": "这个多少钱？", "pinyin": "Zhège duōshǎo qián?", "translation": "How much is this?" },
+      { "hanzi": "我没有钱。", "pinyin": "Wǒ méiyǒu qián.", "translation": "I don't have money." },
+      { "hanzi": "他工作赚钱。", "pinyin": "Tā gōngzuò zhuànqián.", "translation": "He works to earn money." }
+    ],
+    "compounds": [
+      { "hanzi": "赚钱", "pinyin": "zhuànqián", "meaning": "earn money" },
+      { "hanzi": "花钱", "pinyin": "huāqián", "meaning": "spend money" },
+      { "hanzi": "没钱", "pinyin": "méi qián", "meaning": "no money" }
+    ]
+  },
+  { "hanzi": "买", "pinyin": "mǎi", "meaning": "to buy", "hsk": 1,
+    "examples": [
+      { "hanzi": "我想买水果。", "pinyin": "Wǒ xiǎng mǎi shuǐguǒ.", "translation": "I want to buy fruit." },
+      { "hanzi": "她买了一本书。", "pinyin": "Tā mǎi le yì běn shū.", "translation": "She bought a book." },
+      { "hanzi": "我们去买东西。", "pinyin": "Wǒmen qù mǎi dōngxi.", "translation": "We are going shopping." }
+    ],
+    "compounds": [
+      { "hanzi": "买东西", "pinyin": "mǎi dōngxi", "meaning": "go shopping, buy things" },
+      { "hanzi": "买书", "pinyin": "mǎi shū", "meaning": "buy a book" }
+    ]
+  },
+  { "hanzi": "工作", "pinyin": "gōngzuò", "meaning": "work, job; to work", "hsk": 1,
+    "examples": [
+      { "hanzi": "他的工作很忙。", "pinyin": "Tā de gōngzuò hěn máng.", "translation": "His job is very busy." },
+      { "hanzi": "我在公司工作。", "pinyin": "Wǒ zài gōngsī gōngzuò.", "translation": "I work at a company." },
+      { "hanzi": "她找到了新工作。", "pinyin": "Tā zhǎodào le xīn gōngzuò.", "translation": "She found a new job." }
+    ],
+    "compounds": [
+      { "hanzi": "工作时间", "pinyin": "gōngzuò shíjiān", "meaning": "work hours" },
+      { "hanzi": "找工作", "pinyin": "zhǎo gōngzuò", "meaning": "look for a job" },
+      { "hanzi": "做工作", "pinyin": "zuò gōngzuò", "meaning": "do work" }
+    ]
+  }
 ]

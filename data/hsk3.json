@@ -1,32 +1,309 @@
 [
-  { "hanzi": "环境", "pinyin": "huánjìng", "meaning": "environment", "hsk": 3, "example": { "hanzi": "我们要保护环境。", "pinyin": "Wǒmen yào bǎohù huánjìng.", "translation": "We must protect the environment." } },
-  { "hanzi": "经验", "pinyin": "jīngyàn", "meaning": "experience", "hsk": 3, "example": { "hanzi": "他有很多工作经验。", "pinyin": "Tā yǒu hěn duō gōngzuò jīngyàn.", "translation": "He has a lot of work experience." } },
-  { "hanzi": "解决", "pinyin": "jiějué", "meaning": "to solve, to resolve", "hsk": 3, "example": { "hanzi": "我们一起解决问题。", "pinyin": "Wǒmen yìqǐ jiějué wèntí.", "translation": "Let's solve the problem together." } },
-  { "hanzi": "影响", "pinyin": "yǐngxiǎng", "meaning": "to influence; influence", "hsk": 3, "example": { "hanzi": "天气影响了我的心情。", "pinyin": "Tiānqì yǐngxiǎng le wǒ de xīnqíng.", "translation": "The weather affected my mood." } },
-  { "hanzi": "选择", "pinyin": "xuǎnzé", "meaning": "to choose; choice", "hsk": 3, "example": { "hanzi": "你做了正确的选择。", "pinyin": "Nǐ zuò le zhèngquè de xuǎnzé.", "translation": "You made the right choice." } },
-  { "hanzi": "习惯", "pinyin": "xíguàn", "meaning": "habit; to be used to", "hsk": 3, "example": { "hanzi": "我习惯早起。", "pinyin": "Wǒ xíguàn zǎoqǐ.", "translation": "I am used to getting up early." } },
-  { "hanzi": "机会", "pinyin": "jīhuì", "meaning": "opportunity, chance", "hsk": 3, "example": { "hanzi": "这是一个好机会。", "pinyin": "Zhè shì yí ge hǎo jīhuì.", "translation": "This is a good opportunity." } },
-  { "hanzi": "计划", "pinyin": "jìhuà", "meaning": "plan; to plan", "hsk": 3, "example": { "hanzi": "我有一个旅游计划。", "pinyin": "Wǒ yǒu yí ge lǚyóu jìhuà.", "translation": "I have a travel plan." } },
-  { "hanzi": "提高", "pinyin": "tígāo", "meaning": "to improve, to raise", "hsk": 3, "example": { "hanzi": "我要提高中文水平。", "pinyin": "Wǒ yào tígāo zhōngwén shuǐpíng.", "translation": "I want to improve my Chinese level." } },
-  { "hanzi": "了解", "pinyin": "liǎojiě", "meaning": "to understand, to know about", "hsk": 3, "example": { "hanzi": "我很了解他。", "pinyin": "Wǒ hěn liǎojiě tā.", "translation": "I know him well." } },
-  { "hanzi": "关系", "pinyin": "guānxì", "meaning": "relationship, relation", "hsk": 3, "example": { "hanzi": "他们的关系很好。", "pinyin": "Tāmen de guānxì hěn hǎo.", "translation": "Their relationship is very good." } },
-  { "hanzi": "决定", "pinyin": "juédìng", "meaning": "to decide; decision", "hsk": 3, "example": { "hanzi": "我决定去中国学习。", "pinyin": "Wǒ juédìng qù Zhōngguó xuéxí.", "translation": "I decided to go to China to study." } },
-  { "hanzi": "发现", "pinyin": "fāxiàn", "meaning": "to discover, to find", "hsk": 3, "example": { "hanzi": "我发现了一个问题。", "pinyin": "Wǒ fāxiàn le yí ge wèntí.", "translation": "I found a problem." } },
-  { "hanzi": "完全", "pinyin": "wánquán", "meaning": "completely, totally", "hsk": 3, "example": { "hanzi": "我完全同意你。", "pinyin": "Wǒ wánquán tóngyì nǐ.", "translation": "I completely agree with you." } },
-  { "hanzi": "认为", "pinyin": "rènwéi", "meaning": "to think, to believe", "hsk": 3, "example": { "hanzi": "我认为这很重要。", "pinyin": "Wǒ rènwéi zhè hěn zhòngyào.", "translation": "I think this is very important." } },
-  { "hanzi": "继续", "pinyin": "jìxù", "meaning": "to continue", "hsk": 3, "example": { "hanzi": "请继续说。", "pinyin": "Qǐng jìxù shuō.", "translation": "Please continue speaking." } },
-  { "hanzi": "需要", "pinyin": "xūyào", "meaning": "to need", "hsk": 3, "example": { "hanzi": "我需要你的帮助。", "pinyin": "Wǒ xūyào nǐ de bāngzhù.", "translation": "I need your help." } },
-  { "hanzi": "情况", "pinyin": "qíngkuàng", "meaning": "situation, circumstances", "hsk": 3, "example": { "hanzi": "现在情况怎么样？", "pinyin": "Xiànzài qíngkuàng zěnmeyàng?", "translation": "How is the situation now?" } },
-  { "hanzi": "成功", "pinyin": "chénggōng", "meaning": "success; to succeed", "hsk": 3, "example": { "hanzi": "祝你成功！", "pinyin": "Zhù nǐ chénggōng!", "translation": "Wish you success!" } },
-  { "hanzi": "努力", "pinyin": "nǔlì", "meaning": "to work hard; effort", "hsk": 3, "example": { "hanzi": "他学习很努力。", "pinyin": "Tā xuéxí hěn nǔlì.", "translation": "He studies very hard." } },
-  { "hanzi": "办法", "pinyin": "bànfǎ", "meaning": "method, way, solution", "hsk": 3, "example": { "hanzi": "我想到了一个办法。", "pinyin": "Wǒ xiǎngdào le yí ge bànfǎ.", "translation": "I thought of a solution." } },
-  { "hanzi": "意思", "pinyin": "yìsi", "meaning": "meaning", "hsk": 3, "example": { "hanzi": "这个词是什么意思？", "pinyin": "Zhège cí shì shénme yìsi?", "translation": "What does this word mean?" } },
-  { "hanzi": "比较", "pinyin": "bǐjiào", "meaning": "relatively; to compare", "hsk": 3, "example": { "hanzi": "今天比较冷。", "pinyin": "Jīntiān bǐjiào lěng.", "translation": "It is relatively cold today." } },
-  { "hanzi": "突然", "pinyin": "tūrán", "meaning": "suddenly", "hsk": 3, "example": { "hanzi": "天突然下雨了。", "pinyin": "Tiān tūrán xià yǔ le.", "translation": "It suddenly started raining." } },
-  { "hanzi": "记忆", "pinyin": "jìyì", "meaning": "memory", "hsk": 3, "example": { "hanzi": "我对那天的记忆很清楚。", "pinyin": "Wǒ duì nà tiān de jìyì hěn qīngchu.", "translation": "I remember that day clearly." } },
-  { "hanzi": "锻炼", "pinyin": "duànliàn", "meaning": "to exercise, to work out", "hsk": 3, "example": { "hanzi": "我每天早上锻炼身体。", "pinyin": "Wǒ měitiān zǎoshang duànliàn shēntǐ.", "translation": "I exercise every morning." } },
-  { "hanzi": "经济", "pinyin": "jīngjì", "meaning": "economy", "hsk": 3, "example": { "hanzi": "中国的经济发展很快。", "pinyin": "Zhōngguó de jīngjì fāzhǎn hěn kuài.", "translation": "China's economy develops quickly." } },
-  { "hanzi": "文化", "pinyin": "wénhuà", "meaning": "culture", "hsk": 3, "example": { "hanzi": "我对中国文化很感兴趣。", "pinyin": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.", "translation": "I'm very interested in Chinese culture." } },
-  { "hanzi": "提供", "pinyin": "tígōng", "meaning": "to provide, to supply", "hsk": 3, "example": { "hanzi": "公司提供免费午餐。", "pinyin": "Gōngsī tígōng miǎnfèi wǔcān.", "translation": "The company provides free lunch." } },
-  { "hanzi": "建议", "pinyin": "jiànyì", "meaning": "to suggest; suggestion", "hsk": 3, "example": { "hanzi": "我建议你早点休息。", "pinyin": "Wǒ jiànyì nǐ zǎodiǎn xiūxi.", "translation": "I suggest you rest earlier." } }
+  { "hanzi": "环境", "pinyin": "huánjìng", "meaning": "environment", "hsk": 3,
+    "examples": [
+      { "hanzi": "我们要保护环境。", "pinyin": "Wǒmen yào bǎohù huánjìng.", "translation": "We must protect the environment." },
+      { "hanzi": "这里的环境很安静。", "pinyin": "Zhèlǐ de huánjìng hěn ānjìng.", "translation": "The environment here is very quiet." },
+      { "hanzi": "环境污染是个大问题。", "pinyin": "Huánjìng wūrǎn shì ge dà wèntí.", "translation": "Environmental pollution is a big problem." }
+    ],
+    "compounds": [
+      { "hanzi": "保护环境", "pinyin": "bǎohù huánjìng", "meaning": "protect the environment" },
+      { "hanzi": "环境污染", "pinyin": "huánjìng wūrǎn", "meaning": "environmental pollution" }
+    ]
+  },
+  { "hanzi": "经验", "pinyin": "jīngyàn", "meaning": "experience", "hsk": 3,
+    "examples": [
+      { "hanzi": "他有很多工作经验。", "pinyin": "Tā yǒu hěn duō gōngzuò jīngyàn.", "translation": "He has a lot of work experience." },
+      { "hanzi": "这是一次很好的经验。", "pinyin": "Zhè shì yí cì hěn hǎo de jīngyàn.", "translation": "This was a great experience." },
+      { "hanzi": "我们可以从经验中学习。", "pinyin": "Wǒmen kěyǐ cóng jīngyàn zhōng xuéxí.", "translation": "We can learn from experience." }
+    ],
+    "compounds": [
+      { "hanzi": "工作经验", "pinyin": "gōngzuò jīngyàn", "meaning": "work experience" },
+      { "hanzi": "有经验", "pinyin": "yǒu jīngyàn", "meaning": "experienced" }
+    ]
+  },
+  { "hanzi": "解决", "pinyin": "jiějué", "meaning": "to solve, to resolve", "hsk": 3,
+    "examples": [
+      { "hanzi": "我们一起解决问题。", "pinyin": "Wǒmen yìqǐ jiějué wèntí.", "translation": "Let's solve the problem together." },
+      { "hanzi": "这个办法可以解决问题。", "pinyin": "Zhège bànfǎ kěyǐ jiějué wèntí.", "translation": "This method can solve the problem." },
+      { "hanzi": "问题已经解决了。", "pinyin": "Wèntí yǐjīng jiějué le.", "translation": "The problem has been solved." }
+    ],
+    "compounds": [
+      { "hanzi": "解决问题", "pinyin": "jiějué wèntí", "meaning": "solve a problem" }
+    ]
+  },
+  { "hanzi": "影响", "pinyin": "yǐngxiǎng", "meaning": "to influence; influence", "hsk": 3,
+    "examples": [
+      { "hanzi": "天气影响了我的心情。", "pinyin": "Tiānqì yǐngxiǎng le wǒ de xīnqíng.", "translation": "The weather affected my mood." },
+      { "hanzi": "这个决定影响了很多人。", "pinyin": "Zhège juédìng yǐngxiǎng le hěn duō rén.", "translation": "This decision affected many people." },
+      { "hanzi": "环境对健康有影响。", "pinyin": "Huánjìng duì jiànkāng yǒu yǐngxiǎng.", "translation": "The environment has an impact on health." }
+    ],
+    "compounds": [
+      { "hanzi": "有影响", "pinyin": "yǒu yǐngxiǎng", "meaning": "have an impact" }
+    ]
+  },
+  { "hanzi": "选择", "pinyin": "xuǎnzé", "meaning": "to choose; choice", "hsk": 3,
+    "examples": [
+      { "hanzi": "你做了正确的选择。", "pinyin": "Nǐ zuò le zhèngquè de xuǎnzé.", "translation": "You made the right choice." },
+      { "hanzi": "我们有很多选择。", "pinyin": "Wǒmen yǒu hěn duō xuǎnzé.", "translation": "We have many choices." },
+      { "hanzi": "他选择了留在中国。", "pinyin": "Tā xuǎnzé le liú zài Zhōngguó.", "translation": "He chose to stay in China." }
+    ],
+    "compounds": [
+      { "hanzi": "做选择", "pinyin": "zuò xuǎnzé", "meaning": "make a choice" }
+    ]
+  },
+  { "hanzi": "习惯", "pinyin": "xíguàn", "meaning": "habit; to be used to", "hsk": 3,
+    "examples": [
+      { "hanzi": "我习惯早起。", "pinyin": "Wǒ xíguàn zǎoqǐ.", "translation": "I am used to getting up early." },
+      { "hanzi": "这是一个好习惯。", "pinyin": "Zhè shì yí ge hǎo xíguàn.", "translation": "This is a good habit." },
+      { "hanzi": "我还不习惯这里的生活。", "pinyin": "Wǒ hái bù xíguàn zhèlǐ de shēnghuó.", "translation": "I'm not used to life here yet." }
+    ],
+    "compounds": [
+      { "hanzi": "好习惯", "pinyin": "hǎo xíguàn", "meaning": "good habit" },
+      { "hanzi": "坏习惯", "pinyin": "huài xíguàn", "meaning": "bad habit" }
+    ]
+  },
+  { "hanzi": "机会", "pinyin": "jīhuì", "meaning": "opportunity, chance", "hsk": 3,
+    "examples": [
+      { "hanzi": "这是一个好机会。", "pinyin": "Zhè shì yí ge hǎo jīhuì.", "translation": "This is a good opportunity." },
+      { "hanzi": "我不想错过这个机会。", "pinyin": "Wǒ bùxiǎng cuòguò zhège jīhuì.", "translation": "I don't want to miss this opportunity." },
+      { "hanzi": "谢谢你给我这个机会。", "pinyin": "Xièxie nǐ gěi wǒ zhège jīhuì.", "translation": "Thank you for giving me this opportunity." }
+    ],
+    "compounds": [
+      { "hanzi": "好机会", "pinyin": "hǎo jīhuì", "meaning": "good opportunity" },
+      { "hanzi": "错过机会", "pinyin": "cuòguò jīhuì", "meaning": "miss an opportunity" }
+    ]
+  },
+  { "hanzi": "计划", "pinyin": "jìhuà", "meaning": "plan; to plan", "hsk": 3,
+    "examples": [
+      { "hanzi": "我有一个旅游计划。", "pinyin": "Wǒ yǒu yí ge lǚyóu jìhuà.", "translation": "I have a travel plan." },
+      { "hanzi": "我们的计划改变了。", "pinyin": "Wǒmen de jìhuà gǎibiàn le.", "translation": "Our plan has changed." },
+      { "hanzi": "他正在计划一次旅行。", "pinyin": "Tā zhèngzài jìhuà yí cì lǚxíng.", "translation": "He is planning a trip." }
+    ],
+    "compounds": [
+      { "hanzi": "旅游计划", "pinyin": "lǚyóu jìhuà", "meaning": "travel plan" },
+      { "hanzi": "学习计划", "pinyin": "xuéxí jìhuà", "meaning": "study plan" }
+    ]
+  },
+  { "hanzi": "提高", "pinyin": "tígāo", "meaning": "to improve, to raise", "hsk": 3,
+    "examples": [
+      { "hanzi": "我要提高中文水平。", "pinyin": "Wǒ yào tígāo zhōngwén shuǐpíng.", "translation": "I want to improve my Chinese level." },
+      { "hanzi": "多练习可以提高成绩。", "pinyin": "Duō liànxí kěyǐ tígāo chéngjì.", "translation": "Practicing more can improve grades." },
+      { "hanzi": "公司想提高服务质量。", "pinyin": "Gōngsī xiǎng tígāo fúwù zhìliàng.", "translation": "The company wants to improve service quality." }
+    ],
+    "compounds": [
+      { "hanzi": "提高水平", "pinyin": "tígāo shuǐpíng", "meaning": "raise level" }
+    ]
+  },
+  { "hanzi": "了解", "pinyin": "liǎojiě", "meaning": "to understand, to know about", "hsk": 3,
+    "examples": [
+      { "hanzi": "我很了解他。", "pinyin": "Wǒ hěn liǎojiě tā.", "translation": "I know him well." },
+      { "hanzi": "我想了解中国文化。", "pinyin": "Wǒ xiǎng liǎojiě Zhōngguó wénhuà.", "translation": "I want to learn about Chinese culture." },
+      { "hanzi": "你了解这个情况吗？", "pinyin": "Nǐ liǎojiě zhège qíngkuàng ma?", "translation": "Do you understand this situation?" }
+    ],
+    "compounds": [
+      { "hanzi": "了解情况", "pinyin": "liǎojiě qíngkuàng", "meaning": "understand the situation" }
+    ]
+  },
+  { "hanzi": "关系", "pinyin": "guānxì", "meaning": "relationship, relation", "hsk": 3,
+    "examples": [
+      { "hanzi": "他们的关系很好。", "pinyin": "Tāmen de guānxì hěn hǎo.", "translation": "Their relationship is very good." },
+      { "hanzi": "这两件事没有关系。", "pinyin": "Zhè liǎng jiàn shì méiyǒu guānxì.", "translation": "These two things are not related." },
+      { "hanzi": "好的关系需要努力维护。", "pinyin": "Hǎo de guānxì xūyào nǔlì wéihù.", "translation": "Good relationships need effort to maintain." }
+    ],
+    "compounds": [
+      { "hanzi": "没关系", "pinyin": "méi guānxì", "meaning": "it doesn't matter" },
+      { "hanzi": "关系很好", "pinyin": "guānxì hěn hǎo", "meaning": "good relationship" }
+    ]
+  },
+  { "hanzi": "决定", "pinyin": "juédìng", "meaning": "to decide; decision", "hsk": 3,
+    "examples": [
+      { "hanzi": "我决定去中国学习。", "pinyin": "Wǒ juédìng qù Zhōngguó xuéxí.", "translation": "I decided to go to China to study." },
+      { "hanzi": "这是一个重要的决定。", "pinyin": "Zhè shì yí ge zhòngyào de juédìng.", "translation": "This is an important decision." },
+      { "hanzi": "你决定好了吗？", "pinyin": "Nǐ juédìng hǎo le ma?", "translation": "Have you decided?" }
+    ],
+    "compounds": [
+      { "hanzi": "做决定", "pinyin": "zuò juédìng", "meaning": "make a decision" },
+      { "hanzi": "重要决定", "pinyin": "zhòngyào juédìng", "meaning": "important decision" }
+    ]
+  },
+  { "hanzi": "发现", "pinyin": "fāxiàn", "meaning": "to discover, to find", "hsk": 3,
+    "examples": [
+      { "hanzi": "我发现了一个问题。", "pinyin": "Wǒ fāxiàn le yí ge wèntí.", "translation": "I found a problem." },
+      { "hanzi": "科学家发现了新的星球。", "pinyin": "Kēxuéjiā fāxiàn le xīn de xīngqiú.", "translation": "Scientists discovered a new planet." },
+      { "hanzi": "我发现他变了。", "pinyin": "Wǒ fāxiàn tā biàn le.", "translation": "I discovered that he has changed." }
+    ],
+    "compounds": [
+      { "hanzi": "发现问题", "pinyin": "fāxiàn wèntí", "meaning": "discover a problem" }
+    ]
+  },
+  { "hanzi": "完全", "pinyin": "wánquán", "meaning": "completely, totally", "hsk": 3,
+    "examples": [
+      { "hanzi": "我完全同意你。", "pinyin": "Wǒ wánquán tóngyì nǐ.", "translation": "I completely agree with you." },
+      { "hanzi": "这完全不一样。", "pinyin": "Zhè wánquán bù yíyàng.", "translation": "This is completely different." },
+      { "hanzi": "他完全明白了。", "pinyin": "Tā wánquán míngbái le.", "translation": "He completely understood." }
+    ],
+    "compounds": [
+      { "hanzi": "完全同意", "pinyin": "wánquán tóngyì", "meaning": "completely agree" }
+    ]
+  },
+  { "hanzi": "认为", "pinyin": "rènwéi", "meaning": "to think, to believe", "hsk": 3,
+    "examples": [
+      { "hanzi": "我认为这很重要。", "pinyin": "Wǒ rènwéi zhè hěn zhòngyào.", "translation": "I think this is very important." },
+      { "hanzi": "大家都认为他是对的。", "pinyin": "Dàjiā dōu rènwéi tā shì duì de.", "translation": "Everyone thinks he is right." },
+      { "hanzi": "你认为怎么样？", "pinyin": "Nǐ rènwéi zěnmeyàng?", "translation": "What do you think?" }
+    ],
+    "compounds": []
+  },
+  { "hanzi": "继续", "pinyin": "jìxù", "meaning": "to continue", "hsk": 3,
+    "examples": [
+      { "hanzi": "请继续说。", "pinyin": "Qǐng jìxù shuō.", "translation": "Please continue speaking." },
+      { "hanzi": "我们继续工作吧。", "pinyin": "Wǒmen jìxù gōngzuò ba.", "translation": "Let's continue working." },
+      { "hanzi": "他继续学习中文。", "pinyin": "Tā jìxù xuéxí zhōngwén.", "translation": "He continues to study Chinese." }
+    ],
+    "compounds": [
+      { "hanzi": "继续工作", "pinyin": "jìxù gōngzuò", "meaning": "continue working" },
+      { "hanzi": "继续学习", "pinyin": "jìxù xuéxí", "meaning": "continue studying" }
+    ]
+  },
+  { "hanzi": "需要", "pinyin": "xūyào", "meaning": "to need", "hsk": 3,
+    "examples": [
+      { "hanzi": "我需要你的帮助。", "pinyin": "Wǒ xūyào nǐ de bāngzhù.", "translation": "I need your help." },
+      { "hanzi": "你需要休息一下。", "pinyin": "Nǐ xūyào xiūxi yíxià.", "translation": "You need to rest a bit." },
+      { "hanzi": "这个计划需要更多时间。", "pinyin": "Zhège jìhuà xūyào gèng duō shíjiān.", "translation": "This plan needs more time." }
+    ],
+    "compounds": [
+      { "hanzi": "需要帮助", "pinyin": "xūyào bāngzhù", "meaning": "need help" },
+      { "hanzi": "需要时间", "pinyin": "xūyào shíjiān", "meaning": "need time" }
+    ]
+  },
+  { "hanzi": "情况", "pinyin": "qíngkuàng", "meaning": "situation, circumstances", "hsk": 3,
+    "examples": [
+      { "hanzi": "现在情况怎么样？", "pinyin": "Xiànzài qíngkuàng zěnmeyàng?", "translation": "How is the situation now?" },
+      { "hanzi": "这种情况很常见。", "pinyin": "Zhè zhǒng qíngkuàng hěn chángjiàn.", "translation": "This kind of situation is common." },
+      { "hanzi": "请告诉我具体情况。", "pinyin": "Qǐng gàosu wǒ jùtǐ qíngkuàng.", "translation": "Please tell me the specific situation." }
+    ],
+    "compounds": [
+      { "hanzi": "了解情况", "pinyin": "liǎojiě qíngkuàng", "meaning": "understand the situation" }
+    ]
+  },
+  { "hanzi": "成功", "pinyin": "chénggōng", "meaning": "success; to succeed", "hsk": 3,
+    "examples": [
+      { "hanzi": "祝你成功！", "pinyin": "Zhù nǐ chénggōng!", "translation": "Wish you success!" },
+      { "hanzi": "他终于成功了。", "pinyin": "Tā zhōngyú chénggōng le.", "translation": "He finally succeeded." },
+      { "hanzi": "成功需要努力。", "pinyin": "Chénggōng xūyào nǔlì.", "translation": "Success requires effort." }
+    ],
+    "compounds": [
+      { "hanzi": "成功了", "pinyin": "chénggōng le", "meaning": "succeeded" }
+    ]
+  },
+  { "hanzi": "努力", "pinyin": "nǔlì", "meaning": "to work hard; effort", "hsk": 3,
+    "examples": [
+      { "hanzi": "他学习很努力。", "pinyin": "Tā xuéxí hěn nǔlì.", "translation": "He studies very hard." },
+      { "hanzi": "只要努力就会成功。", "pinyin": "Zhǐyào nǔlì jiù huì chénggōng.", "translation": "As long as you work hard, you will succeed." },
+      { "hanzi": "谢谢你的努力。", "pinyin": "Xièxie nǐ de nǔlì.", "translation": "Thank you for your effort." }
+    ],
+    "compounds": [
+      { "hanzi": "努力工作", "pinyin": "nǔlì gōngzuò", "meaning": "work hard" },
+      { "hanzi": "努力学习", "pinyin": "nǔlì xuéxí", "meaning": "study hard" }
+    ]
+  },
+  { "hanzi": "办法", "pinyin": "bànfǎ", "meaning": "method, way, solution", "hsk": 3,
+    "examples": [
+      { "hanzi": "我想到了一个办法。", "pinyin": "Wǒ xiǎngdào le yí ge bànfǎ.", "translation": "I thought of a solution." },
+      { "hanzi": "这个办法很有用。", "pinyin": "Zhège bànfǎ hěn yǒuyòng.", "translation": "This method is very useful." },
+      { "hanzi": "我们没有别的办法。", "pinyin": "Wǒmen méiyǒu bié de bànfǎ.", "translation": "We have no other way." }
+    ],
+    "compounds": [
+      { "hanzi": "想办法", "pinyin": "xiǎng bànfǎ", "meaning": "think of a way" }
+    ]
+  },
+  { "hanzi": "意思", "pinyin": "yìsi", "meaning": "meaning", "hsk": 3,
+    "examples": [
+      { "hanzi": "这个词是什么意思？", "pinyin": "Zhège cí shì shénme yìsi?", "translation": "What does this word mean?" },
+      { "hanzi": "我明白你的意思。", "pinyin": "Wǒ míngbái nǐ de yìsi.", "translation": "I understand what you mean." },
+      { "hanzi": "这本书很有意思。", "pinyin": "Zhè běn shū hěn yǒuyìsi.", "translation": "This book is very interesting." }
+    ],
+    "compounds": [
+      { "hanzi": "有意思", "pinyin": "yǒuyìsi", "meaning": "interesting" },
+      { "hanzi": "什么意思", "pinyin": "shénme yìsi", "meaning": "what does it mean" }
+    ]
+  },
+  { "hanzi": "比较", "pinyin": "bǐjiào", "meaning": "relatively; to compare", "hsk": 3,
+    "examples": [
+      { "hanzi": "今天比较冷。", "pinyin": "Jīntiān bǐjiào lěng.", "translation": "It is relatively cold today." },
+      { "hanzi": "我们可以比较这两个选择。", "pinyin": "Wǒmen kěyǐ bǐjiào zhè liǎng ge xuǎnzé.", "translation": "We can compare these two choices." },
+      { "hanzi": "这道题比较难。", "pinyin": "Zhè dào tí bǐjiào nán.", "translation": "This question is relatively difficult." }
+    ],
+    "compounds": []
+  },
+  { "hanzi": "突然", "pinyin": "tūrán", "meaning": "suddenly", "hsk": 3,
+    "examples": [
+      { "hanzi": "天突然下雨了。", "pinyin": "Tiān tūrán xià yǔ le.", "translation": "It suddenly started raining." },
+      { "hanzi": "他突然站起来了。", "pinyin": "Tā tūrán zhàn qǐlái le.", "translation": "He suddenly stood up." },
+      { "hanzi": "突然想起了一件事。", "pinyin": "Tūrán xiǎngqǐ le yí jiàn shì.", "translation": "Suddenly remembered something." }
+    ],
+    "compounds": []
+  },
+  { "hanzi": "记忆", "pinyin": "jìyì", "meaning": "memory", "hsk": 3,
+    "examples": [
+      { "hanzi": "我对那天的记忆很清楚。", "pinyin": "Wǒ duì nà tiān de jìyì hěn qīngchu.", "translation": "I remember that day clearly." },
+      { "hanzi": "他的记忆力很好。", "pinyin": "Tā de jìyìlì hěn hǎo.", "translation": "His memory is very good." },
+      { "hanzi": "这是一段美好的记忆。", "pinyin": "Zhè shì yí duàn měihǎo de jìyì.", "translation": "This is a beautiful memory." }
+    ],
+    "compounds": [
+      { "hanzi": "记忆力", "pinyin": "jìyìlì", "meaning": "memory (capacity)" }
+    ]
+  },
+  { "hanzi": "锻炼", "pinyin": "duànliàn", "meaning": "to exercise, to work out", "hsk": 3,
+    "examples": [
+      { "hanzi": "我每天早上锻炼身体。", "pinyin": "Wǒ měitiān zǎoshang duànliàn shēntǐ.", "translation": "I exercise every morning." },
+      { "hanzi": "锻炼对身体很好。", "pinyin": "Duànliàn duì shēntǐ hěn hǎo.", "translation": "Exercise is good for the body." },
+      { "hanzi": "他坚持每天锻炼。", "pinyin": "Tā jiānchí měitiān duànliàn.", "translation": "He keeps exercising every day." }
+    ],
+    "compounds": [
+      { "hanzi": "锻炼身体", "pinyin": "duànliàn shēntǐ", "meaning": "exercise the body" }
+    ]
+  },
+  { "hanzi": "经济", "pinyin": "jīngjì", "meaning": "economy", "hsk": 3,
+    "examples": [
+      { "hanzi": "中国的经济发展很快。", "pinyin": "Zhōngguó de jīngjì fāzhǎn hěn kuài.", "translation": "China's economy develops quickly." },
+      { "hanzi": "这个国家的经济很强。", "pinyin": "Zhège guójiā de jīngjì hěn qiáng.", "translation": "This country's economy is strong." },
+      { "hanzi": "经济问题很复杂。", "pinyin": "Jīngjì wèntí hěn fùzá.", "translation": "Economic issues are complex." }
+    ],
+    "compounds": [
+      { "hanzi": "经济发展", "pinyin": "jīngjì fāzhǎn", "meaning": "economic development" }
+    ]
+  },
+  { "hanzi": "文化", "pinyin": "wénhuà", "meaning": "culture", "hsk": 3,
+    "examples": [
+      { "hanzi": "我对中国文化很感兴趣。", "pinyin": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.", "translation": "I'm very interested in Chinese culture." },
+      { "hanzi": "每个国家都有自己的文化。", "pinyin": "Měi ge guójiā dōu yǒu zìjǐ de wénhuà.", "translation": "Every country has its own culture." },
+      { "hanzi": "学语言可以了解文化。", "pinyin": "Xué yǔyán kěyǐ liǎojiě wénhuà.", "translation": "Learning a language helps you understand culture." }
+    ],
+    "compounds": [
+      { "hanzi": "中国文化", "pinyin": "Zhōngguó wénhuà", "meaning": "Chinese culture" },
+      { "hanzi": "文化差异", "pinyin": "wénhuà chāyì", "meaning": "cultural difference" }
+    ]
+  },
+  { "hanzi": "提供", "pinyin": "tígōng", "meaning": "to provide, to supply", "hsk": 3,
+    "examples": [
+      { "hanzi": "公司提供免费午餐。", "pinyin": "Gōngsī tígōng miǎnfèi wǔcān.", "translation": "The company provides free lunch." },
+      { "hanzi": "学校提供很多帮助。", "pinyin": "Xuéxiào tígōng hěn duō bāngzhù.", "translation": "The school provides a lot of help." },
+      { "hanzi": "他们提供了很多信息。", "pinyin": "Tāmen tígōng le hěn duō xìnxī.", "translation": "They provided a lot of information." }
+    ],
+    "compounds": [
+      { "hanzi": "提供帮助", "pinyin": "tígōng bāngzhù", "meaning": "provide help" }
+    ]
+  },
+  { "hanzi": "建议", "pinyin": "jiànyì", "meaning": "to suggest; suggestion", "hsk": 3,
+    "examples": [
+      { "hanzi": "我建议你早点休息。", "pinyin": "Wǒ jiànyì nǐ zǎodiǎn xiūxi.", "translation": "I suggest you rest earlier." },
+      { "hanzi": "谢谢你的建议。", "pinyin": "Xièxie nǐ de jiànyì.", "translation": "Thank you for your suggestion." },
+      { "hanzi": "他给了我一个好建议。", "pinyin": "Tā gěi le wǒ yí ge hǎo jiànyì.", "translation": "He gave me a good suggestion." }
+    ],
+    "compounds": [
+      { "hanzi": "好建议", "pinyin": "hǎo jiànyì", "meaning": "good suggestion" },
+      { "hanzi": "提出建议", "pinyin": "tíchū jiànyì", "meaning": "make a suggestion" }
+    ]
+  }
 ]

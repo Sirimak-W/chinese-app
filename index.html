@@ -40,6 +40,7 @@
     <section class="flashcard" id="flashcard">
       <div class="card-badge">
         <span class="badge-hsk" id="badge-hsk">HSK 1</span>
+        <span class="badge-mode" id="badge-mode">Hanzi → Meaning</span>
         <span class="badge-reviews" id="badge-reviews">0 reviews</span>
       </div>
 
@@ -53,46 +54,31 @@
         🔊 Listen
       </button>
 
-      <div class="example">
-        <div class="ex-pinyin" id="ex-pinyin">Wǒ měitiān xuéxí zhōngwén.</div>
-        <div class="ex-hanzi" id="ex-hanzi">我每天学习中文。</div>
-        <div class="ex-translation" id="ex-translation">I study Chinese every day.</div>
+      <button class="reveal-btn" id="reveal-btn">Show Answer</button>
+
+      <div class="answer-block" id="answer-block" hidden>
+        <div class="examples" id="examples"></div>
+
+        <div class="compounds" id="compounds"></div>
+
+        <div class="produce">
+          <h3>Write your own sentence</h3>
+          <textarea id="my-sentence-input" placeholder="用这个词造一个句子…"></textarea>
+          <button class="save-sentence-btn" id="save-sentence-btn">Save sentence</button>
+          <ul class="my-sentences-list" id="my-sentences-list"></ul>
+        </div>
       </div>
     </section>
 
     <!-- 4. SRS buttons -->
-    <section class="srs" id="srs">
-      <button class="srs-btn again" data-grade="again">Again<span>10 min</span></button>
-      <button class="srs-btn hard"  data-grade="hard">Hard<span>1 day</span></button>
-      <button class="srs-btn good"  data-grade="good">Good<span>4 days</span></button>
-      <button class="srs-btn easy"  data-grade="easy">Easy<span>1 week</span></button>
+    <section class="srs" id="srs" hidden>
+      <button class="srs-btn again" data-grade="again">Again<span id="again-sub">10 min</span></button>
+      <button class="srs-btn hard"  data-grade="hard">Hard<span id="hard-sub">1 day</span></button>
+      <button class="srs-btn good"  data-grade="good">Good<span id="good-sub">3 days</span></button>
+      <button class="srs-btn easy"  data-grade="easy">Easy<span id="easy-sub">7 days</span></button>
     </section>
 
-    <!-- 5. Learning modules grid -->
-    <section class="modules">
-      <div class="module mod-vocab">
-        <div class="mod-head"><span class="mod-icon">📖</span> Vocabulary HSK 1–3</div>
-        <div class="mod-count" id="mod-vocab-count">0 / 1200</div>
-        <div class="bar"><div class="bar-fill" id="mod-vocab-bar"></div></div>
-      </div>
-      <div class="module mod-writing">
-        <div class="mod-head"><span class="mod-icon">✍️</span> Writing / Characters</div>
-        <div class="mod-count" id="mod-writing-count">0 / 300</div>
-        <div class="bar"><div class="bar-fill" id="mod-writing-bar"></div></div>
-      </div>
-      <div class="module mod-tones">
-        <div class="mod-head"><span class="mod-icon">🎵</span> Tones</div>
-        <div class="mod-count" id="mod-tones-count">0 / 4 levels</div>
-        <div class="bar"><div class="bar-fill" id="mod-tones-bar"></div></div>
-      </div>
-      <div class="module mod-grammar">
-        <div class="mod-head"><span class="mod-icon">🧩</span> Grammar</div>
-        <div class="mod-count" id="mod-grammar-count">0 / 40 lessons</div>
-        <div class="bar"><div class="bar-fill" id="mod-grammar-bar"></div></div>
-      </div>
-    </section>
-
-    <!-- 6. Year activity heatmap -->
+    <!-- 5. Year activity heatmap -->
     <section class="heatmap-section">
       <h2 class="section-title">Activity</h2>
       <div class="heatmap-scroll">

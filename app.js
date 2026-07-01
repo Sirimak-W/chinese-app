@@ -1,11 +1,13 @@
 /* ===========================================================
-   学 Mandarin — daily Chinese flashcards (SM-2 SRS)
-   Pure client-side. State lives in localStorage.
+   学 Mandarin — daily Chinese flashcards
+   Fixed-day spaced repetition (Day 1 / 3 / 7 / 14 / 30), two-way
+   active recall, and sentence production. Pure client-side.
+   State lives in localStorage.
    =========================================================== */
 
 const STORE_KEY = "mandarin-app-v1";
 const MS_DAY = 86400000;
-const TARGETS = { vocab: 1200, writing: 300, tones: 4, grammar: 40 };
+const STEPS = [1, 3, 7, 14, 30]; // days between reviews, per the spaced-repetition concept
 
 /* ---------- persistent state ---------- */
 function loadState() {
@@ -20,7 +22,7 @@ function saveState() {
 }
 
 const state = loadState();
-state.cards = state.cards || {};       // hanzi -> { interval, easeFactor, dueDate, reviewCount, firstLearned }
+state.cards = state.cards || {};       // hanzi -> { stepIndex, reviewCount, firstLearned, dueDate, mySentences }
 state.sessions = state.sessions || {}; // "YYYY-MM-DD" -> review count
 state.reviews = state.reviews || [];   // [{ date:"YYYY-MM-DD", correct:bool }]
 
@@ -34,6 +36,7 @@ const todayKey = () => isoDay(new Date());
 /* ---------- vocabulary ---------- */
 let deck = [];      // all loaded words
 let current = null; // word object on screen
+let revealed = false;
 
 async function loadDeck() {
   const files = ["data/hsk1.json", "data/hsk2.json", "data/hsk3.json"];
@@ -41,48 +44,80 @@ async function loadDeck() {
   deck = parts.flat();
 }
 
-/* ---------- SM-2 scheduling ---------- */
-// Grades anchor to the spec's button table for the first graduating review,
-// then grow by the SM-2 ease factor on subsequent successful reviews.
+/* ---------- card record ---------- */
+// Cards from the old SM-2 version only had `interval` (days); map that onto
+// the nearest fixed step so existing progress isn't lost.
+function migrateStepIndex(interval) {
+  if (!interval || interval < 1) return -1;
+  let idx = 0;
+  for (let i = 0; i < STEPS.length; i++) if (interval >= STEPS[i]) idx = i;
+  return idx;
+}
+
+function getCard(hanzi) {
+  const c = state.cards[hanzi];
+  if (!c) return null;
+  if (c.stepIndex === undefined) c.stepIndex = migrateStepIndex(c.interval);
+  if (!c.mySentences) c.mySentences = [];
+  return c;
+}
+
+/* ---------- fixed-day scheduling ---------- */
 function schedule(word, grade) {
-  const c = state.cards[word.hanzi] || {
-    interval: 0,
-    easeFactor: 2.5,
-    reviewCount: 0,
-    firstLearned: null,
-  };
+  const c = getCard(word.hanzi) || { stepIndex: -1, reviewCount: 0, firstLearned: null, mySentences: [] };
 
-  let ef = c.easeFactor;
-  const prev = c.interval; // days
-  let intervalDays;
-
+  let days;
   switch (grade) {
     case "again":
-      ef = Math.max(1.3, ef - 0.2);
-      intervalDays = 10 / (60 * 24); // 10 minutes
+      c.stepIndex = -1;
+      days = 10 / (60 * 24); // 10 minutes — relearn today
       break;
     case "hard":
-      ef = Math.max(1.3, ef - 0.15);
-      intervalDays = prev >= 1 ? prev * 1.2 : 1;
+      c.stepIndex = Math.max(0, c.stepIndex);
+      days = STEPS[c.stepIndex];
       break;
     case "good":
-      intervalDays = prev >= 1 ? prev * ef : 4;
+      c.stepIndex = Math.min(STEPS.length - 1, c.stepIndex + 1);
+      days = STEPS[c.stepIndex];
       break;
     case "easy":
-      ef = ef + 0.15;
-      intervalDays = prev >= 1 ? prev * ef * 1.3 : 7;
+      c.stepIndex = Math.min(STEPS.length - 1, c.stepIndex + 2);
+      days = STEPS[c.stepIndex];
       break;
   }
 
-  c.easeFactor = Math.round(ef * 100) / 100;
-  c.interval = Math.round(intervalDays * 100) / 100;
-  c.dueDate = new Date(Date.now() + intervalDays * MS_DAY).toISOString();
+  c.dueDate = new Date(Date.now() + days * MS_DAY).toISOString();
   c.reviewCount += 1;
   if (c.firstLearned === null && grade !== "again") c.firstLearned = todayKey();
 
   state.cards[word.hanzi] = c;
   logReview(grade !== "again");
   saveState();
+}
+
+function stepDays(stepIndex, grade) {
+  switch (grade) {
+    case "again":
+      return null; // shown as "10 min", not a day count
+    case "hard":
+      return STEPS[Math.max(0, stepIndex)];
+    case "good":
+      return STEPS[Math.min(STEPS.length - 1, stepIndex + 1)];
+    case "easy":
+      return STEPS[Math.min(STEPS.length - 1, stepIndex + 2)];
+  }
+}
+
+function fmtDays(d) {
+  return d === 1 ? "1 day" : d + " days";
+}
+
+function updateSrsLabels(c) {
+  const stepIndex = c ? c.stepIndex : -1;
+  $("again-sub").textContent = "10 min";
+  $("hard-sub").textContent = fmtDays(stepDays(stepIndex, "hard"));
+  $("good-sub").textContent = fmtDays(stepDays(stepIndex, "good"));
+  $("easy-sub").textContent = fmtDays(stepDays(stepIndex, "easy"));
 }
 
 function logReview(correct) {
@@ -120,17 +155,112 @@ function pickNext() {
 /* ---------- rendering ---------- */
 const $ = (id) => document.getElementById(id);
 
+// Active recall: half the time show the Hanzi and ask for the meaning
+// ("recognize"), half the time show the English and ask for the Hanzi
+// ("recall") — testing both directions instead of showing everything at once.
 function renderCard(word) {
   current = word;
-  const c = state.cards[word.hanzi];
-  $("card-hanzi").textContent = word.hanzi;
-  $("card-pinyin").textContent = word.pinyin;
-  $("card-meaning").textContent = word.meaning;
-  $("ex-pinyin").textContent = word.example.pinyin;
-  $("ex-hanzi").textContent = word.example.hanzi;
-  $("ex-translation").textContent = word.example.translation;
+  revealed = false;
+  current.direction = Math.random() < 0.5 ? "recognize" : "recall";
+  const c = getCard(word.hanzi);
+
   $("badge-hsk").textContent = "HSK " + word.hsk;
   $("badge-reviews").textContent = (c ? c.reviewCount : 0) + " reviews";
+  $("badge-mode").textContent = current.direction === "recognize" ? "Hanzi → Meaning" : "Meaning → Hanzi";
+
+  if (current.direction === "recognize") {
+    $("card-hanzi").textContent = word.hanzi;
+    $("card-pinyin").textContent = word.pinyin;
+    $("card-meaning").textContent = "?";
+  } else {
+    $("card-hanzi").textContent = "？";
+    $("card-pinyin").textContent = "";
+    $("card-meaning").textContent = word.meaning;
+  }
+
+  $("reveal-btn").hidden = false;
+  $("answer-block").hidden = true;
+  $("srs").hidden = true;
+}
+
+function reveal() {
+  if (!current || revealed) return;
+  revealed = true;
+
+  $("card-hanzi").textContent = current.hanzi;
+  $("card-pinyin").textContent = current.pinyin;
+  $("card-meaning").textContent = current.meaning;
+
+  renderExamples(current);
+  renderCompounds(current);
+  renderMySentences(current);
+
+  $("reveal-btn").hidden = true;
+  $("answer-block").hidden = false;
+  $("srs").hidden = false;
+  updateSrsLabels(getCard(current.hanzi));
+}
+
+function renderExamples(word) {
+  const container = $("examples");
+  container.innerHTML = "";
+  word.examples.forEach((ex) => {
+    const div = document.createElement("div");
+    div.className = "example";
+    div.innerHTML = `
+      <div class="ex-pinyin">${ex.pinyin}</div>
+      <div class="ex-hanzi">${ex.hanzi}</div>
+      <div class="ex-translation">${ex.translation}</div>
+      <button class="ex-listen-btn" title="Listen">🔊</button>
+    `;
+    div.querySelector(".ex-listen-btn").addEventListener("click", () => speak(ex.hanzi));
+    container.appendChild(div);
+  });
+}
+
+function renderCompounds(word) {
+  const container = $("compounds");
+  container.innerHTML = "";
+  if (!word.compounds || !word.compounds.length) {
+    container.hidden = true;
+    return;
+  }
+  container.hidden = false;
+  word.compounds.forEach((cp) => {
+    const chip = document.createElement("button");
+    chip.className = "compound-chip";
+    chip.title = "Listen";
+    chip.innerHTML = `
+      <span class="cp-hanzi">${cp.hanzi}</span>
+      <span class="cp-pinyin">${cp.pinyin}</span>
+      <span class="cp-meaning">${cp.meaning}</span>
+    `;
+    chip.addEventListener("click", () => speak(cp.hanzi));
+    container.appendChild(chip);
+  });
+}
+
+function renderMySentences(word) {
+  const c = getCard(word.hanzi);
+  const list = $("my-sentences-list");
+  list.innerHTML = "";
+  (c ? c.mySentences : []).forEach((s) => {
+    const li = document.createElement("li");
+    li.textContent = s.text;
+    list.appendChild(li);
+  });
+}
+
+function saveMySentence() {
+  const input = $("my-sentence-input");
+  const text = input.value.trim();
+  if (!text || !current) return;
+  const c = getCard(current.hanzi) || { stepIndex: -1, reviewCount: 0, firstLearned: null, mySentences: [] };
+  c.mySentences.push({ text, date: todayKey() });
+  state.cards[current.hanzi] = c;
+  saveState();
+  input.value = "";
+  renderMySentences(current);
 }
 
 function renderStats() {
@@ -155,26 +285,7 @@ function renderStats() {
   $("stat-due").textContent = due;
   $("stat-accuracy").textContent = acc === null ? "—" : acc + "%";
 
-  renderModules(learned, cards);
   renderStreak();
-}
-
-function renderModules(learned, cards) {
-  // distinct characters seen across learned words
-  const chars = new Set();
-  for (const [hanzi, c] of Object.entries(state.cards)) {
-    if (c.firstLearned) for (const ch of hanzi) chars.add(ch);
-  }
-  const setBar = (key, value, target, label) => {
-    const pct = Math.min(100, (value / target) * 100);
-    $("mod-" + key + "-bar").style.width = pct + "%";
-    $("mod-" + key + "-count").textContent = value + " / " + label;
-  };
-  setBar("vocab", learned, TARGETS.vocab, TARGETS.vocab);
-  setBar("writing", chars.size, TARGETS.writing, TARGETS.writing);
-  // Tones & Grammar have no dataset yet — bars track real progress once content is added.
-  setBar("tones", 0, TARGETS.tones, TARGETS.tones + " levels");
-  setBar("grammar", 0, TARGETS.grammar, TARGETS.grammar + " lessons");
 }
 
 function renderStreak() {
@@ -259,12 +370,29 @@ function renderHeatmap() {
 }
 
 /* ---------- speech ---------- */
+// Chrome loads its voice list asynchronously, so the very first speak() call
+// (usually the main word's Listen button, right after page load) can pick a
+// different, worse voice than later calls made once voices have loaded
+// (usually the example sentences). Cache one good zh-CN voice up front and
+// reuse it everywhere so the main word always sounds like the sentences.
+let zhVoice = null;
+function pickZhVoice() {
+  const voices = speechSynthesis.getVoices();
+  const zh = voices.filter((v) => v.lang && v.lang.toLowerCase().startsWith("zh"));
+  zhVoice = zh.find((v) => /google/i.test(v.name)) || zh[0] || null;
+}
+if ("speechSynthesis" in window) {
+  pickZhVoice();
+  speechSynthesis.onvoiceschanged = pickZhVoice;
+}
+
 function speak(text) {
   if (!("speechSynthesis" in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "zh-CN";
   u.rate = 0.8;
+  if (zhVoice) u.voice = zhVoice;
   speechSynthesis.speak(u);
 }
 
@@ -277,9 +405,11 @@ function next() {
 
 function init() {
   $("listen-btn").addEventListener("click", () => current && speak(current.hanzi));
+  $("reveal-btn").addEventListener("click", reveal);
+  $("save-sentence-btn").addEventListener("click", saveMySentence);
   document.querySelectorAll(".srs-btn").forEach((btn) =>
     btn.addEventListener("click", () => {
-      if (!current) return;
+      if (!current || !revealed) return;
       schedule(current, btn.dataset.grade);
       next();
     })
