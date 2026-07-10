@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学 Mandarin — Handwriting</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---- Handwriting practice: 米字格 (rice grid) theme ----
+       Kept distinct from the flashcard blue palette on purpose — the
+       cinnabar-on-xuan-paper look is core to the practice-paper concept.
+       Only the app chrome (nav, buttons) reuses style.css tokens. */
+    :root {
+      --ink: #161a1f;
+      --paper: #fdfcf8;
+      --cinnabar: #d94f2b;
+      --inkstone: #1d2833;
+      --seal: #d9a441;
+    }
+    .hw-nav { display: flex; align-items: center; justify-content: space-between; padding: 8px 4px 20px; }
+    .hw-back { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .hw-back:hover { text-decoration: underline; }
+    .hw-xp {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700;
+      color: var(--seal); box-shadow: var(--shadow);
+    }
+
+    .hw-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow);
+    }
+
+    /* character picker */
+    .hw-picker { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .hw-chip {
+      font-size: 24px; font-weight: 700; font-family: "KaiTi", "STKaiti", "Kaiti SC", serif;
+      width: 48px; height: 48px; border: 1.5px solid var(--border); border-radius: 10px;
+      background: var(--paper); color: var(--ink); cursor: pointer; transition: all 0.12s ease;
+    }
+    .hw-chip:hover { border-color: var(--cinnabar); }
+    .hw-chip.active { border-color: var(--cinnabar); background: rgba(217, 79, 43, 0.08); color: var(--cinnabar); }
+
+    /* intro line */
+    .hw-intro { text-align: center; margin-bottom: 14px; }
+    .hw-intro .hw-pinyin { font-size: 20px; color: var(--cinnabar); font-weight: 600; }
+    .hw-intro .hw-meaning { font-size: 15px; color: var(--muted); }
+    .hw-intro .hw-word { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .hw-intro .hw-hsk {
+      display: inline-block; font-size: 11px; font-weight: 700; color: var(--cinnabar);
+      background: rgba(217, 79, 43, 0.1); border-radius: 999px; padding: 2px 9px; margin-left: 6px; vertical-align: middle;
+    }
+    .hw-listen {
+      margin-top: 8px; background: none; border: none; font-size: 16px; cursor: pointer; opacity: 0.75;
+    }
+    .hw-listen:hover { opacity: 1; }
+
+    /* canvas */
+    .hw-canvas-wrap { display: flex; justify-content: center; }
+    #hw-canvas {
+      width: 100%; max-width: 360px; aspect-ratio: 1 / 1; touch-action: none;
+      border-radius: 12px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--border);
+      cursor: crosshair;
+    }
+
+    /* controls */
+    .hw-controls { display: flex; gap: 10px; justify-content: center; align-items: center; margin: 14px 0 6px; flex-wrap: wrap; }
+    .hw-btn {
+      background: var(--inkstone); color: #fff; border: none; border-radius: 999px;
+      padding: 9px 22px; font-size: 15px; font-weight: 600; cursor: pointer; transition: filter 0.15s ease, transform 0.08s ease;
+    }
+    .hw-btn:hover { filter: brightness(1.15); }
+    .hw-btn:active { transform: scale(0.96); }
+    .hw-btn.ghost { background: var(--surface); color: var(--inkstone); border: 1.5px solid var(--border); }
+    .hw-slow { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); user-select: none; cursor: pointer; }
+
+    /* feedback */
+    .hw-feedback { text-align: center; min-height: 24px; margin-top: 6px; font-size: 15px; font-weight: 600; }
+    .hw-feedback.good { color: var(--success); }
+    .hw-feedback.bad { color: var(--cinnabar); }
+    .hw-feedback.info { color: var(--muted); font-weight: 500; }
+
+    /* summary */
+    .hw-summary { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px; text-align: center; }
+    .hw-summary h3 { font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+    .hw-summary .hw-verdict { font-size: 14px; margin-bottom: 4px; }
+    .hw-summary .hw-srs { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .hw-stroke-scores { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; text-align: left; }
+    .hw-stroke-scores li {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--bg); border-radius: 8px; padding: 8px 12px; font-size: 14px;
+    }
+    .hw-stroke-scores .sc { font-weight: 700; }
+
+    @keyframes hw-xp-pop { 0% { transform: translateY(6px) scale(0.9); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(-18px) scale(1.1); opacity: 0; } }
+    .hw-xp-pop {
+      position: fixed; pointer-events: none; z-index: 20; font-weight: 800; color: var(--seal);
+      font-size: 20px; animation: hw-xp-pop 0.9s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <nav class="hw-nav">
+      <a class="hw-back" href="index.html">← Flashcards</a>
+      <h1 class="nav-title" style="font-size:22px;">写 <span>Handwriting</span></h1>
+      <div class="hw-xp" title="Session XP">✦ <span id="hw-xp">0</span> XP</div>
+    </nav>
+
+    <section class="hw-card">
+      <div class="hw-picker" id="hw-picker"></div>
+
+      <div class="hw-intro">
+        <div>
+          <span class="hw-pinyin" id="hw-pinyin">—</span>
+          <span class="hw-hsk" id="hw-hsk">HSK 1</span>
+        </div>
+        <div class="hw-meaning" id="hw-meaning">—</div>
+        <div class="hw-word" id="hw-word">—</div>
+        <button class="hw-listen" id="hw-listen" title="Listen (zh-CN)">🔊 Listen</button>
+      </div>
+
+      <div class="hw-canvas-wrap">
+        <canvas id="hw-canvas" width="800" height="800"></canvas>
+      </div>
+
+      <div class="hw-controls">
+        <button class="hw-btn" id="hw-watch">▶ Watch</button>
+        <label class="hw-slow"><input type="checkbox" id="hw-slow" /> Slow motion</label>
+      </div>
+
+      <div class="hw-feedback info" id="hw-feedback">Pick a character, then press Watch.</div>
+
+      <div class="hw-summary" id="hw-summary" hidden>
+        <h3>✓ Character complete</h3>
+        <div class="hw-verdict" id="hw-verdict"></div>
+        <div class="hw-srs" id="hw-srs"></div>
+        <ul class="hw-stroke-scores" id="hw-stroke-scores"></ul>
+        <button class="hw-btn ghost" id="hw-next">Next character →</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="handwriting.js"></script>
+</body>
+</html>
